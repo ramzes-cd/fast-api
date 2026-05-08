@@ -9,10 +9,10 @@ from src.core.exceptions.database_exceptions import (
     PostNotFoundException,
     UserNotFoundException,
 )
-from src.models.category import Category
-from src.models.location import Location
-from src.models.post import Post
-from src.models.user import User
+from src.infrastructure.sqlite.models.category import Category
+from src.infrastructure.sqlite.models.location import Location
+from src.infrastructure.sqlite.models.post import Post
+from src.infrastructure.sqlite.models.user import User
 from src.schemas.posts import PostCreate, PostUpdate
 
 

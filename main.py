@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from src.routers import users, categories, locations, posts, comments
+from src.api import users, categories, locations, posts, comments
 
 app = FastAPI(title="Blogicum API", description="API for Blogicum project", version="1.0.0")
 

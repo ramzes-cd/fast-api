@@ -7,8 +7,8 @@ from src.core.exceptions.database_exceptions import (
     CredentialException,
     PostNotFoundException,
 )
-from src.models.comment import Comment
-from src.models.post import Post
+from src.infrastructure.sqlite.models.comment import Comment
+from src.infrastructure.sqlite.models.post import Post
 from src.schemas.comments import CommentCreate, CommentUpdate
 
 

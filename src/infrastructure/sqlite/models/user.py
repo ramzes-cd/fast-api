@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, String, Text, Boolean, DateTime, ForeignKey
+from sqlalchemy import Boolean, Column, DateTime, Integer, String, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from database import Base
+
+from src.infrastructure.sqlite.database import Base
 
 
 class User(Base):
@@ -17,6 +18,5 @@ class User(Base):
     active = Column(Boolean, default=True)
     date_joined = Column(DateTime(timezone=True), server_default=func.now())
 
-    # Связи
     posts = relationship("Post", back_populates="author", cascade="all, delete-orphan")
     comments = relationship("Comment", back_populates="author", cascade="all, delete-orphan")

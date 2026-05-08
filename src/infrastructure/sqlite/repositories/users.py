@@ -8,7 +8,7 @@ from src.core.exceptions.database_exceptions import (
     UserByNicknameAlreadyExistsException,
     UserNotFoundException,
 )
-from src.models.user import User
+from src.infrastructure.sqlite.models.user import User
 from src.schemas.users import UserCreate, UserUpdate
 
 

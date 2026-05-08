@@ -7,7 +7,7 @@ from src.core.exceptions.database_exceptions import (
     LocationAlreadyExistsException,
     LocationNotFoundException,
 )
-from src.models.location import Location
+from src.infrastructure.sqlite.models.location import Location
 from src.schemas.locations import LocationCreate, LocationUpdate
 
 

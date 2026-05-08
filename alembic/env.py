@@ -13,11 +13,11 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 
 from database import Base # noqa
-from src.models.user import User # noqa
-from src.models.category import Category # noqa
-from src.models.location import Location # noqa
-from src.models.post import Post # noqa
-from src.models.comment import Comment # noqa
+from src.infrastructure.sqlite.models.user import User # noqa
+from src.infrastructure.sqlite.models.category import Category # noqa
+from src.infrastructure.sqlite.models.location import Location # noqa
+from src.infrastructure.sqlite.models.post import Post # noqa
+from src.infrastructure.sqlite.models.comment import Comment # noqa
 
 target_metadata = Base.metadata
 

@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, String, Text, Boolean, DateTime
+from sqlalchemy import Boolean, Column, DateTime, Integer, String, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from database import Base
+
+from src.infrastructure.sqlite.database import Base
 
 
 class Category(Base):
@@ -14,5 +15,4 @@ class Category(Base):
     is_published = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    # Связи
     posts = relationship("Post", back_populates="category")

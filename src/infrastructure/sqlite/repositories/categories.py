@@ -7,7 +7,7 @@ from src.core.exceptions.database_exceptions import (
     CategoryAlreadyExistsException,
     CategoryNotFoundException,
 )
-from src.models.category import Category
+from src.infrastructure.sqlite.models.category import Category
 from src.schemas.categories import CategoryCreate, CategoryUpdate
 
 
