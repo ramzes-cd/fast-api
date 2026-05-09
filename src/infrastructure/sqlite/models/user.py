@@ -14,7 +14,7 @@ class User(Base):
     last_name = Column(String(100))
     bio_info = Column(Text)
     email = Column(String(100), unique=True, index=True)
-    password = Column(String(255), nullable=False)
+    password_hash = Column(String, nullable=False)
     active = Column(Boolean, default=True)
     date_joined = Column(DateTime(timezone=True), server_default=func.now())
 

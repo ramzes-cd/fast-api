@@ -14,6 +14,7 @@ from src.core.exceptions.domain_exceptions import (
 )
 from src.infrastructure.sqlite.repositories.users import UserRepository
 from src.schemas.users import UserCreate, UserOut, UserUpdate
+from src.auth.security import hash_password
 
 
 class MethodsForUser:

@@ -38,6 +38,11 @@ class UserUpdate(UserBase):
         return value
 
 
+class UserResponse(BaseModel):
+    id: int
+    username: str
+
+
 class UserOut(UserBase):
     id: int
     nickname: str
